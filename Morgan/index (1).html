@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morgan Gaming Shop | Fast &amp; Secure Game Top-Up</title>
+
+  <!-- Shared base styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Member 1: Header + Hero -->
+  <link rel="stylesheet" href="css/header.css" />
+  <!-- Member 2: Games section (add when ready) -->
+  <!-- <link rel="stylesheet" href="css/games.css" /> -->
+  <!-- Member 3: Footer section (add when ready) -->
+  <!-- <link rel="stylesheet" href="css/footer.css" /> -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- =============================================
+      MEMBER 1 — HEADER & HERO SLIDER
+  ============================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Morgan Gaming Shop Home">
+        <span class="logo-icon">🎮</span>
+        <span class="logo-text">Morgan<span class="logo-accent">Gaming</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <ul>
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="#" class="nav-link">Store</a></li>
+          <li><a href="#" class="nav-link">About Us</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="#" class="btn-topup" aria-label="Top-Up Now">Top-Up Now</a>
+        <!-- Hamburger (mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+      <ul>
+        <li><a href="#" class="nav-link active">Home</a></li>
+        <li><a href="#" class="nav-link">Store</a></li>
+        <li><a href="#" class="nav-link">About Us</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="hero-slider" aria-label="Featured promotions">
+    <div class="slider-track" id="sliderTrack">
+
+      <!-- Slide 1 -->
+      <div class="slide" style="--slide-bg: linear-gradient(120deg, #0f0c29, #302b63, #24243e);">
+        <div class="slide-content">
+          <p class="slide-eyebrow">🔥 Limited Offer</p>
+          <h1 class="slide-title">Top-Up Mobile Legends<br/><span class="slide-accent">Instantly</span></h1>
+          <p class="slide-sub">Fast, secure, and affordable diamond top-ups delivered in seconds.</p>
+          <a href="#" class="btn-slide">Shop Now</a>
+        </div>
+        <div class="slide-graphic slide-graphic--mlbb"></div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide" style="--slide-bg: linear-gradient(120deg, #1a0533, #3d1a6e, #1e0a3c);">
+        <div class="slide-content">
+          <p class="slide-eyebrow">⚡ Best Price</p>
+          <h1 class="slide-title">Free Fire Diamonds<br/><span class="slide-accent">Cheap & Fast</span></h1>
+          <p class="slide-sub">No login required. Top up your account in under 60 seconds.</p>
+          <a href="#" class="btn-slide">Get Diamonds</a>
+        </div>
+        <div class="slide-graphic slide-graphic--freefire"></div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide" style="--slide-bg: linear-gradient(120deg, #0a2a1f, #0d5c3a, #07291c);">
+        <div class="slide-content">
+          <p class="slide-eyebrow">🎮 New Game Added</p>
+          <h1 class="slide-title">PUBG UC & Crates<br/><span class="slide-accent">Top-Up Today</span></h1>
+          <p class="slide-sub">Buy UC for PUBG Mobile at the best rates. 100% safe and guaranteed.</p>
+          <a href="#" class="btn-slide">Buy UC</a>
+        </div>
+        <div class="slide-graphic slide-graphic--pubg"></div>
+      </div>
+
+    </div>
+
+    <!-- Slider Controls -->
+    <button class="slider-btn slider-btn--prev" id="prevBtn" aria-label="Previous slide">&#8249;</button>
+    <button class="slider-btn slider-btn--next" id="nextBtn" aria-label="Next slide">&#8250;</button>
+
+    <!-- Dots -->
+    <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Slide indicators">
+      <button class="dot active" role="tab" aria-selected="true" aria-label="Go to slide 1"></button>
+      <button class="dot" role="tab" aria-selected="false" aria-label="Go to slide 2"></button>
+      <button class="dot" role="tab" aria-selected="false" aria-label="Go to slide 3"></button>
+    </div>
+  </section>
+
+  <!-- =============================================
+       MEMBER 2 — FEATURED GAMES SECTION (placeholder)
+  ============================================== -->
+  <main id="games-section">
+    <!-- Member 2 adds content here -->
+  </main>
+
+  <!-- =============================================
+       MEMBER 3 — NEWS & FOOTER (placeholder)
+  ============================================== -->
+  <footer id="footer-section">
+    <!-- Member 3 adds content here -->
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/slider.js"></script>
+</body>
+</html>
