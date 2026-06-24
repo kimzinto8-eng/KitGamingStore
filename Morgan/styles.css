@@ -212,6 +212,6 @@ The Main Search Container (Pill Style)
         Because the track uses standard flex gap properties, moving it by -50% lands the duplicated images
         perfectly where the originals started.
         */
-        transform: translateX(-50%);
+        transform: translateX(-30%);
     }
 }
