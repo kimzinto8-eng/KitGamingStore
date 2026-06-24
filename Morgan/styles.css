@@ -7,7 +7,7 @@
 body {
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
-    background : #0f172a;
+    background: #0f172a;
     color: white;
 }
 
@@ -18,50 +18,47 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     margin-bottom: 2rem;
-    
-    display:flex;
+
+    display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
-nav .nav-group{
-    display:flex;
-    align-items:center;
-    gap:2rem;
-}
-.logo{
-    display:flex;
+nav .nav-group {
+    display: flex;
     align-items: center;
-    gap:0.75rem;
+    gap: 2rem;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     text-decoration: none;
-    cursor:pointer;
-
+    cursor: pointer;
 }
-.logo-img{
-    height:45px;
+.logo-img {
+    height: 45px;
     width: auto;
-    object-fit:contain;
+    object-fit: contain;
 }
 
-.logo-text-group{
-    display:flex;
+.logo-text-group {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     line-height: 1.1;
-    
-}
+}  
 /* Ensure the wrapper stacks its children vertically */
 .logo-text-group {
     display: flex !important;
-    flex-direction: column !important; 
+    flex-direction: column !important;
     justify-content: center;
-    align-items: flex-start;          
+    align-items: flex-start;
     line-height: 1.1;
-}
+}  
 
 .logo-main {
-    display: block; 
+    display: block;
     font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     font-weight: 800;
@@ -72,61 +69,55 @@ nav .nav-group{
 
 /* Force bottom line to behave as a block element */
 .logo-sub {
-    display: block; 
+    display: block;
     font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     font-weight: 800;
-    color: #0aa9f3; 
+    color: #0aa9f3;
     letter-spacing: 1px;
     text-transform: uppercase;
-    
 }
-.nav-link{
-    list-style:none;
+.nav-link {
+    list-style: none;
     display: flex;
     gap: 2rem;
-    
-
 }
-.nav-link li a{
+.nav-link li a {
     position: relative;
     font-size: 1.05rem;
     font-weight: 500;
     text-decoration: none;
     color: #e2e8f0;
     transform: 0.3s;
-}
+}  
 
-.nav-link li a:hover{
+.nav-link li a:hover {
     color: #38bdf8;
     text-shadow: 0 0 10px #38bdf8;
-
 }
-.btns{
-    display:flex;
+.btns {
+    display: flex;
 }
 
-.btn{
+.btn {
     padding: 0.5rem 1.5rem;
     border-radius: 30px;
     font-weight: 600;
     font-size: 1rem;
-    background:#38bdf8;
-    color:#0f172a;
+    background: #38bdf8;
+    color: #0f172a;
     box-shadow: 0 0 15px #38bdf8;
-    border:none;
-    cursor:pointer;
+    border: none;
+    cursor: pointer;
     transition: 0.3s;
-
 }
 
 .btn:hover {
-    background:#0aa9f3;
+    background: #0aa9f3;
     box-shadow: 0 0 25px #0aa9f3;
-
 }
 /* ==========================================================================
-   The Main Search Container (Pill Style)
+The Main Search Container (Pill Style)
    ========================================================================== */
 .search-box {
     display: flex;
@@ -147,7 +138,6 @@ nav .nav-group{
     background: rgba(255, 255, 255, 0.06);
 }
 
-
 .search-box input {
     flex: 1; /* Makes the input take up all remaining space between the icons */
     background: transparent;
@@ -157,8 +147,6 @@ nav .nav-group{
     font-family: "Poppins", sans-serif;
     font-size: 0.95rem;
 }
-
-
 
 /* Icons Styling*/
 .icon {
@@ -175,21 +163,55 @@ nav .nav-group{
 .search-box:focus-within .search-icon {
     color: #38bdf8;
 }
-
-/* Right filter button container */
-.filter-btn {
-    background: transparent;
-    border: none;
-    color: #64748b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 2px;
-    transition: color 0.2s ease;
+.slider-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Hovering over the filter icon makes it turn blue */
-.filter-btn:hover {
-    color: #38bdf8;
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden; /* Hides the slides that extend off-screen */
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.slider-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content; /* Allows track to dynamically scale beyond 100% wrapper width */
+    
+    /* Triggers the infinite loop. Adjust '20s' to make it spin faster or slower.*/
+    animation: scrollInfinite 20s linear infinite;
+}
+.slider-track:hover {
+    animation-play-state: paused; /* Pauses the slider when a gamer hovers over a deal */
+}
+.slide {
+    flex-shrink: 0;
+    width: 350px; /* Set a consistent layout width for your banner cards */
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The Infinite CSS Keyframe  */
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Shifts exactly half of the track (the original items). 
+        Because the track uses standard flex gap properties, moving it by -50% lands the duplicated images
+        perfectly where the originals started.
+        */
+        transform: translateX(-50%);
+    }
 }
