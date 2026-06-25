@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIT Gaming Store</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/jpg" href="images/f81f50_53b2aa541fdb4b00ba68cfc8eb59aaa0_mv2-removebg-preview.png">
 
     
-    <link rel="stylesheet" href="styles.css">
+    <script>
+        const track = document.querySelector('.slider-track');
+        const slides = Array.from(document.querySelectorAll('.slide'));
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        
+        // ... rest of the slider script ...
+    </script>
+</body>
+</html>
 
 </head>
 <body>
@@ -55,43 +65,81 @@
         
     </nav>
     <main class="slider-container">
-        <button class="slider-arrow prev-btn">&#10094;</button>
-        
+    <button class="slider-arrow prev-btn">&#10094;</button>
 
     <div class="slider-wrapper">
         <div class="slider-track">
             
             <div class="slide">
-                <img src="images/image.png" alt="3rd Anniversary Event">
-            </div> 
-
-            <div class="slide">
-                <img src="images/mlbb-web-banner45.jpg" alt="New Featured Game">
+                <img src="images/slider/cocodp-mlbb-junii-banner.webp" alt="3rd Anniversary Event">
             </div>
 
             <div class="slide">
-                <img src="images/cocodp-mlbb-junii-banner.webp" alt="Store Top Up Deals">
-            </div>
-            <div class="slide">
-                <img src="images/image.png" alt="3rd Anniversary Event">
+                <img src="images/slider/image.png" alt="New Featured Game">
             </div>
 
             <div class="slide">
-                <img src="images/mlbb-web-banner45.jpg" alt="New Featured Game">
+                <img src="images/slider/mlbb-web-banner45.jpg" alt="Store Top Up Deals">
             </div>
-
-            <div class="slide">
-                <img src="images/cocodp-mlbb-junii-banner.webp" alt="Store Top Up Deals">
-                </div>
-
-            </div>
-
 
         </div>
+    </div>
 
-        <button class="slider-arrow next-btn">&#10095;</button>
-    
+    <button class="slider-arrow next-btn">&#10095;</button>
+    <section class="featured-games">
+        <div class="games-grid">
+            </div>
+    </section>
 
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const track = document.querySelector('.slider-track');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        if (!track || slides.length === 0 || !prevBtn || !nextBtn) {
+            console.warn("Slider elements missing from markup. Check your class names.");
+            return; 
+        }
+
+        let currentIndex = 0;
+        let autoPlayTimer;
+
+        function updateSliderPosition() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+            updateSliderPosition();
+            resetAutoPlay();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+            updateSliderPosition();
+            resetAutoPlay();
+        }
+
+        function startAutoPlay() {
+            autoPlayTimer = setInterval(nextSlide, 5000);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayTimer);
+            startAutoPlay();
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        startAutoPlay();
+    });
+    </script>
+
+</body>
+</html>
 </main>
 
 </body>
