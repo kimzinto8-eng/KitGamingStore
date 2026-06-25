@@ -165,7 +165,7 @@ The Main Search Container (Pill Style)
 }
 .slider-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -190,7 +190,7 @@ The Main Search Container (Pill Style)
 }
 .slide {
     flex-shrink: 0;
-    width: 350px; /* Set a consistent layout width for your banner cards */
+    width: 500px; /* Set a consistent layout width for your banner cards */
     aspect-ratio: 16 / 9;
     border-radius: 8px;
     overflow: hidden;
@@ -215,3 +215,27 @@ The Main Search Container (Pill Style)
         transform: translateX(-30%);
     }
 }
+.slider-arrow {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+
+/* Align arrows to the absolute outer edges */
+.prev-btn { left: -0px; }
+.next-btn { right: -0px; }
