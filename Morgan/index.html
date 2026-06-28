@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIT Gaming Store</title>
+    <link rel="icon" type="image/png" href="images/logo/f81f50_53b2aa541fdb4b00ba68cfc8eb59aaa0_mv2-removebg-preview.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/jpg" href="images/f81f50_53b2aa541fdb4b00ba68cfc8eb59aaa0_mv2-removebg-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    
     <script>
         const track = document.querySelector('.slider-track');
         const slides = Array.from(document.querySelectorAll('.slide'));
@@ -16,20 +16,13 @@
         
         // ... rest of the slider script ...
     </script>
-</body>
-</html>
-
 </head>
 <body>
 
-    
     <nav>
         <div class="nav-group">
             <a class="logo" href="#">
-                <!-- Your logo icon image -->
-                <img src="images/f81f50_53b2aa541fdb4b00ba68cfc8eb59aaa0_mv2-removebg-preview.png" alt="Logo" class="logo-img">
-
-                <!-- Make sure this div wrapper surrounds BOTH spans -->
+                <img src="images/logo/f81f50_53b2aa541fdb4b00ba68cfc8eb59aaa0_mv2-removebg-preview.png" alt="KIT Logo" class="logo-img">
                 <div class="logo-text-group">
                     <span class="logo-main">KIT</span>
                     <span class="logo-sub">GAMING STORE</span>
@@ -37,59 +30,193 @@
             </a>
         </div>
 
-            <ul class="nav-link">
-                <li><a href="#" > Home</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-
-            </ul>
-        </div>
+        <ul class="nav-link">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
 
         <div class="search-box">
-    <svg class="icon search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-    </svg>
-
-    <input type="text" placeholder="Search Games...">
-
-
+            <svg class="icon search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input type="text" placeholder="Search Games...">
         </div>
 
-        
         <div class="btns">
             <button class="btn">Login</button>
         </div>
-
-        
-        
     </nav>
+
     <main class="slider-container">
-    <button class="slider-arrow prev-btn">&#10094;</button>
+        <button class="slider-arrow prev-btn" aria-label="Previous Slide">&#10094;</button>
+        
+        <div class="slider-wrapper">
+            <div class="slider-track">
+                <div class="slide"><img src="images/slider/image.png" alt="3rd Anniversary Event"></div> 
+                <div class="slide"><img src="images/slider/mlbb-web-banner45.jpg" alt="New Featured Game"></div>
+                <div class="slide"><img src="images/slider/image.png" alt="Store Top Up Deals"></div>
+                <div class="slide"><img src="images/slider/cocodp-mlbb-junii-banner.webp" alt="Event Updates"></div>
+                <div class="slide"><img src="images/slider/mlbb-web-banner45.jpg" alt="Promo Event"></div>
+                <!-- Duplicates for seamless loop -->
+                <div class="slide"><img src="images/slider/image.png" alt="3rd Anniversary Event"></div> 
+                <div class="slide"><img src="images/slider/mlbb-web-banner45.jpg" alt="New Featured Game"></div>
+                <div class="slide"><img src="images/slider/image.png" alt="Store Top Up Deals"></div>
+                <div class="slide"><img src="images/slider/cocodp-mlbb-junii-banner.webp" alt="Event Updates"></div>
+                <div class="slide"><img src="images/slider/mlbb-web-banner45.jpg" alt="Promo Event"></div>
+            </div>
+        </div>
 
-    <div class="slider-wrapper">
-        <div class="slider-track">
+        <button class="slider-arrow next-btn" aria-label="Next Slide">&#10095;</button>
+    </main>
+        
+    <div class="nav-body">
+        <nav class="sub-nav">
+            <div class="text-body">
+                <span class="main-text">FEATURED</span>
+                <span class="sub-text">GAMES</span>
+            </div>
             
-            <div class="slide">
-                <img src="images/slider/cocodp-mlbb-junii-banner.webp" alt="3rd Anniversary Event">
+            <ul class="sub-nav-links">
+                <li><a href="#" class="active">All Games</a></li>
+                <li><a href="#">Top Rated</a></li>
+                <li><a href="#">New Releases</a></li>
+            </ul>
+        </nav>
+    </div>
+        
+    <section class="featured-games">
+        <div class="games-grid">
+
+            <!-- Card 1 — Mobile Legends -->
+            <div class="game-card">
+                <button class="fav-btn" aria-label="Favourite">♡</button>
+                <img src="images/logoGame/mlbb.webp" >
+                <h3>Mobile Legends</h3>
             </div>
 
-            <div class="slide">
-                <img src="images/slider/image.png" alt="New Featured Game">
+            <!-- Card 2 — Free Fire -->
+            <div class="game-card">
+                <button class="fav-btn" aria-label="Favourite">♡</button>
+                <img src="images/logoGame/ff.webp" >
+                <h3>Free Fire</h3>
             </div>
 
-            <div class="slide">
-                <img src="images/slider/mlbb-web-banner45.jpg" alt="Store Top Up Deals">
+            <!-- Card 3 — Magic Chess  -->
+            <div class="game-card">
+                <button class="fav-btn" aria-label="Favourite">♡</button>
+                <img src="images/logoGame/magicchess.webp" >
+                <h3>Magic Chess</h3>
+            </div>
+
+            <!-- Card 4 — PUBG Mobile -->
+            <div class="game-card">
+                <button class="fav-btn" aria-label="Favourite">♡</button>
+                <img src="images/logoGame/pubg.webp" >
+                <h3>PUBG Mobile</h3>
+            </div>
+
+            <!-- Card 5 — Honor Of Kings -->
+            <div class="game-card">
+                <button class="fav-btn" aria-label="Favourite">♡</button>
+                <img src="images/logoGame/hok.webp" >
+                <h3>Honor Of Kings</h3>
+            </div>
+            <!-- Card 6 Roblox -->
+            <div class="game-card">
+                <button class="fav-btn" aria-label="Favourite">♡</button>
+                <img src="images/logoGame/Roblox.png">
+                <h3>Roblox</h3>
+            </div>
+
+            <!-- Card 7 — Blood Strike -->
+            <div class="game-card">
+                <button class="fav-btn" aria-label="Favourite">♡</button>
+                <img src="images/logoGame/blood strike.jpg" alt="Blood Strike">
+                <div class="game-thumb bg-blood"></div>
+                <h3>Blood Strike</h3>
+            </div>
+
+            <!-- Card 8 — Genshin Imapct-->
+            <div class="game-card">
+                <button class="fav-btn" aria-label="Favourite">♡</button>
+                <img src="images/logoGame/Genshin.webp">
+                <h3>Genshin Impact</h3>
             </div>
 
         </div>
-    </div>
-
-    <button class="slider-arrow next-btn">&#10095;</button>
-    <section class="featured-games">
-        <div class="games-grid">
-            </div>
     </section>
+
+    <section class="news-promotions">
+        <div class="section-header">
+            <h2>NEWS & <span class="highlight">PROMOTIONS</span></h2>
+            <a href="#" class="more-btn">MORE GAMING NEWS AND PROMOTIONS</a>
+        </div>
+
+        <div class="promo-grid">
+            <div class="promo-card">
+                <div class="promo-img-wrapper">
+                    <img src="images/slider/mlbb.PNG" alt="Mobile Legends Promotion Card">
+                </div>
+                <p class="promo-title">Mobile Legends Event</p>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-img-wrapper">
+                    <img src="images/slider/ff.PNG" alt="Free Fire Promotion Card">
+                </div>
+                <p class="promo-title">Free Fire Event</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>KIT Gaming Shop - Official Partner</h3>
+                <p>Reliable game top-ups. Fast delivery. Secure payment.</p>
+                <p class="copyright">&copy; 2026 KIT Gaming Shop. All rights reserved.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Visions</a></li>
+                    <li><a href="#">Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Top 4 Products</h4>
+                <ul>
+                    <li><a href="#">Mobile Legends</a></li>
+                    <li><a href="#">Free Fire</a></li>
+                    <li><a href="#">Blood Strike</a></li>
+                    <li><a href="#">Magic Chess Gogo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Get Updates</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">💬</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">📺</a>
+                </div>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="button">Subscribe</button>
+                </div>
+                <div class="payment-partners">
+                    <span class="pay-badge khqr">KHQR</span>
+                    <span class="pay-badge aba">ABA</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -137,10 +264,17 @@
         startAutoPlay();
     });
     </script>
+    <script>
+        // ── Favourite button toggle ──────────────────────────
+        document.querySelectorAll('.fav-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isLiked = this.classList.toggle('liked');
+                this.textContent = isLiked ? '♥' : '♡';
+            });
+        });
 
-</body>
-</html>
-</main>
+    </script>
 
 </body>
 </html>
