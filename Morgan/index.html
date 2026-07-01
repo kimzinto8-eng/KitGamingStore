@@ -35,9 +35,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <input type="text" id="nav-search-input" placeholder="Search Games..." autocomplete="off">
-            <button class="search-clear-btn" id="search-clear-btn" aria-label="Clear search" hidden>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
+            
 
             <!-- Inline search dropdown -->
             <div class="search-dropdown" id="search-dropdown" hidden>
@@ -405,7 +403,6 @@
     const searchDropdown   = document.getElementById('search-dropdown');
     const searchInner      = document.getElementById('search-dropdown-inner');
     const searchNoResults  = document.getElementById('search-no-results');
-    const searchClearBtn   = document.getElementById('search-clear-btn');
     const searchBoxWrapper = document.getElementById('search-box-wrapper');
 
     function renderSearchResults(query) {
@@ -444,17 +441,12 @@
 
     navSearchInput.addEventListener('focus', openSearchDropdown);
     navSearchInput.addEventListener('input', function() {
-        searchClearBtn.hidden = !this.value;
+       
         renderSearchResults(this.value);
         if (searchDropdown.hidden) openSearchDropdown();
     });
 
-    searchClearBtn.addEventListener('click', () => {
-        navSearchInput.value = '';
-        searchClearBtn.hidden = true;
-        renderSearchResults('');
-        navSearchInput.focus();
-    });
+   
 
     document.addEventListener('click', e => {
         if (!searchBoxWrapper.contains(e.target)) closeSearchDropdown();
